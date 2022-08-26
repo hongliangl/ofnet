@@ -15,3 +15,5 @@ require (
 	golang.org/x/sys v0.0.0-20200113162924-86b910548bc1 // indirect
 	gopkg.in/check.v1 v1.0.0-20190902080502-41f04d3bba15 // indirect
 )
+
+replace antrea.io/libOpenflow v0.8.0 => github.com/hongliangl/libOpenflow v0.0.0-20220826044458-d89f3d570e60

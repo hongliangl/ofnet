@@ -1,5 +1,3 @@
-antrea.io/libOpenflow v0.8.0 h1:Xm6mlSqdXtDD418nf1lndoDvMi8scqUan8pkEUZ2oas=
-antrea.io/libOpenflow v0.8.0/go.mod h1:CzEJZxDNAupiGxeL5VOw92PsxfyvehEAvE3PiC6gr8o=
 github.com/Microsoft/go-winio v0.4.14 h1:+hMXMk01us9KgxGb7ftKQt2Xpf5hH/yky+TDA+qxleU=
 github.com/Microsoft/go-winio v0.4.14/go.mod h1:qXqCSQ3Xa7+6tgxaGTIe4Kpcdsi+P8jBhyzoq1bpyYA=
 github.com/cenkalti/hub v1.0.1-0.20140529221144-7be60e186e66 h1:mqwgWF7yBJ/zOFlWZk84IRFG/FhMG0f7aZWvcTx/JHA=
@@ -11,6 +9,8 @@ github.com/contiv/libovsdb v0.0.0-20170227191248-d0061a53e358/go.mod h1:+qKEHaNV
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
+github.com/hongliangl/libOpenflow v0.0.0-20220826044458-d89f3d570e60 h1:SDez/OaeO7nwMQg4d5qXuQsrxybp9XXMxICSSBt0vPo=
+github.com/hongliangl/libOpenflow v0.0.0-20220826044458-d89f3d570e60/go.mod h1:CzEJZxDNAupiGxeL5VOw92PsxfyvehEAvE3PiC6gr8o=
 github.com/konsorten/go-windows-terminal-sequences v1.0.1/go.mod h1:T0+1ngSBFLxvqU3pZ+m/2kptfBszLMUkC4ZK/EgS/cQ=
 github.com/kr/pretty v0.2.0 h1:s5hAObm+yFO5uHYt5dYjxi2rXrsnmRpJx4OYvIWUaQs=
 github.com/kr/pretty v0.2.0/go.mod h1:ipq/a2n7PKx3OHsz4KJII5eveXtPO4qwEXGdVfWzfnI=
