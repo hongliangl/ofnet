@@ -115,6 +115,12 @@ func (self *Group) getGroupModMessage(command int) *openflow15.GroupMod {
 		groupMod.CommandBucketId = openflow15.OFPG_BUCKET_LAST
 	}
 
+	fmt.Println("ofnet: ========================= groupMod.Command:", groupMod.Command)
+	fmt.Println("ofnet: ========================= groupMod.GroupId:", groupMod.GroupId)
+	fmt.Println("ofnet: ========================= groupMod.BucketArrayLen:", groupMod.BucketArrayLen)
+	fmt.Println("ofnet: ========================= groupMod.Buckets:", groupMod.Buckets)
+	fmt.Println("ofnet: ========================= groupMod.CommandBucketId:", groupMod.CommandBucketId)
+
 	groupMod.Command = uint16(command)
 	return groupMod
 }
