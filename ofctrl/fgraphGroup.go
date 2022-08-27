@@ -3,6 +3,7 @@ package ofctrl
 import (
 	"antrea.io/libOpenflow/openflow15"
 	"antrea.io/libOpenflow/util"
+	"fmt"
 )
 
 type GroupType int
@@ -110,6 +111,7 @@ func (self *Group) getGroupModMessage(command int) *openflow15.GroupMod {
 		groupMod.AddBucket(*bkt)
 	}
 	if command == openflow15.OFPGC_INSERT_BUCKET {
+		fmt.Println("ofnet: =========================, insert_bucket")
 		groupMod.CommandBucketId = openflow15.OFPG_BUCKET_LAST
 	}
 
