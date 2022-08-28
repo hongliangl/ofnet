@@ -33,6 +33,7 @@ type Group struct {
 	ID          uint32
 	GroupType   GroupType
 	Buckets     []*openflow15.Bucket
+	BucketID    uint32
 	isInstalled bool
 }
 
@@ -122,7 +123,7 @@ func (self *Group) getGroupModMessage(command int) *openflow15.GroupMod {
 		groupMod.AddBucket(*bkt)
 	}
 	if command == openflow15.OFPGC_INSERT_BUCKET {
-		fmt.Println("ofnet: =========================, insert_bucket")
+		fmt.Println("ofnet: ========================= insert_bucket")
 		groupMod.CommandBucketId = openflow15.OFPG_BUCKET_LAST
 	}
 	groupMod.Command = uint16(command)
@@ -132,7 +133,7 @@ func (self *Group) getGroupModMessage(command int) *openflow15.GroupMod {
 	fmt.Println("ofnet: ========================= groupMod.GroupId:", groupMod.GroupId)
 	fmt.Println("ofnet: ========================= groupMod.BucketArrayLen:", groupMod.BucketArrayLen)
 	fmt.Println("ofnet: ========================= groupMod.Buckets:", groupMod.Buckets)
-	fmt.Println("ofnet: ========================= groupMod.CommandBucketId:", groupMod.CommandBucketId)
+	fmt.Printf("ofnet: ========================= groupMod.CommandBucketId: %x\n", groupMod.CommandBucketId)
 
 	return groupMod
 }
