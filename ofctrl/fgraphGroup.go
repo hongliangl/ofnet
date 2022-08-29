@@ -63,6 +63,7 @@ func (self *Group) AddBuckets(buckets ...*openflow15.Bucket) {
 	}
 	self.Buckets = append(self.Buckets, buckets...)
 	if self.isInstalled {
+		fmt.Println("ofnet: ========================= AddBuckets!!!!!!!!")
 		self.Install()
 	}
 }
