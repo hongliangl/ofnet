@@ -62,10 +62,6 @@ func (self *Group) AddBuckets(buckets ...*openflow15.Bucket) {
 		self.Buckets = make([]*openflow15.Bucket, 0)
 	}
 	self.Buckets = append(self.Buckets, buckets...)
-	if self.isInstalled {
-		fmt.Println("ofnet: ========================= AddBuckets!!!!!!!!")
-		self.Install()
-	}
 }
 
 func (self *Group) ResetBuckets(buckets ...*openflow15.Bucket) {
