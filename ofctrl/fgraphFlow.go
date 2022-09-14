@@ -1,4 +1,5 @@
-/***
+/*
+**
 Copyright 2014 Cisco Systems Inc. All rights reserved.
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -195,6 +196,10 @@ func (m *FlowBundleMessage) resetXid(xid uint32) util.Message {
 
 func (m *FlowBundleMessage) getXid() uint32 {
 	return m.message.Xid
+}
+
+func (m *FlowBundleMessage) GetMessage() util.Message {
+	return m.message
 }
 
 // string key for the flow
@@ -1886,10 +1891,10 @@ func (self *Flow) ConnTrack(commit bool, force bool, tableID *uint8, zoneID *uin
 
 // Special Actions to to the flow to set conjunctions
 // Note:
-//   1) nclause should be in [2, 64].
-//   2) clause value should be less than or equals to ncluase, and its value should be started from 1.
-//      actual clause in libopenflow messages is started from 0, here would decrement 1 to keep the display
-//      value is consistent with expected configuration
+//  1. nclause should be in [2, 64].
+//  2. clause value should be less than or equals to ncluase, and its value should be started from 1.
+//     actual clause in libopenflow messages is started from 0, here would decrement 1 to keep the display
+//     value is consistent with expected configuration
 func (self *Flow) AddConjunction(conjID uint32, clause uint8, nClause uint8) error {
 	conjunction, err := NewNXConjunctionAction(conjID, clause, nClause)
 	if err != nil {
